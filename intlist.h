@@ -4,15 +4,25 @@
 #ifndef INTLIST_H
 #define INTLIST_H
 
-// definition of Node structure (DO NOT CHANGE):
-struct Node {
-    int info;
-    Node *next;
+class IntList{
+
+public:
+	IntList();
+	void printElements();
+	int lenList();
+	void freeList();
+	void insertLast(int value);
+
+private:
+	// definition of Node structure (DO NOT CHANGE):
+	struct Node {
+    	int info;
+    	Node *next;
+	};
+	Node* head;
+	Node* tail;
+
 };
 
-void printElements(Node* hptr);
-int lenList(Node* hptr);
-
-void freeList(Node* hptr);
 #endif
 

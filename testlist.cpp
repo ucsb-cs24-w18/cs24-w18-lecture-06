@@ -10,29 +10,28 @@ using namespace std;
 
 // creates two lists (one empty), and does simple tests of list methods
 int main(int argc, char *argv[]) {
-    /*int *p=0;
-    int x =10;
-    p=&x;
-    if(p!=0){
-         cout<<*p<<endl;
-    }
-    */
-    Node *head =0; //Empty list
 
-    head = new Node;
-    head->info = 10;
-    head->next = nullptr;
+    IntList l1; //Empty list on stack
 
-    Node * tmp = new Node;
-    tmp->info = 20;
-    tmp->next = head;
+    IntList* p = new IntList(); // Empty list on heap
+ 
+    l1.insertLast(20);
+    l1.insertLast(10);
+    cout<<"Elements of l1 are: ";
+    l1.printElements();
 
-    head = tmp;
-    printElements(head);
+    cout<<"The length of the list is:"<<l1.lenList()<<endl;
+    l1.freeList();
+    cout<<"The length of the list is:"<<l1.lenList()<<endl;
+
+    //Does this code have a memmory leak?
+    //A. Yes
+    //B. No
+
+/*    freeList(head);
+    cout <<"After free"<<endl;
+    //head =nullptr;
     cout<<"The length of the list is:"<<lenList(head)<<endl;
-    freeList(head);
-   // head =nullptr;
-    cout<<"The length of the list is:"<<lenList(head)<<endl;
-
+*/
     return 0;
 }
