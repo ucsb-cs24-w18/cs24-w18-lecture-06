@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
     head = tmp;
     printElements(head);
     cout<<"The length of the list is:"<<lenList(head)<<endl;
-    freeList(head);
+    //freeList(head);
     head =nullptr;
     cout<<"The length of the list is:"<<lenList(head)<<endl;
 
