@@ -8,6 +8,7 @@ class IntList{
 
 public:
 	IntList();
+	~IntList();
 	void printElements();
 	int lenList();
 	void freeList();

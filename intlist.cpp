@@ -7,6 +7,10 @@ IntList::IntList(){
     tail = 0;
 }
 
+IntList::~IntList(){
+    freeList();
+}
+
 void IntList::insertLast(int value){
     if(head==0){
         //Empty list

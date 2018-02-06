@@ -23,15 +23,7 @@ int main(int argc, char *argv[]) {
     cout<<"The length of the list is:"<<l1.lenList()<<endl;
     l1.freeList();
     cout<<"The length of the list is:"<<l1.lenList()<<endl;
+    delete p; //destructor is called
 
-    //Does this code have a memmory leak?
-    //A. Yes
-    //B. No
-
-/*    freeList(head);
-    cout <<"After free"<<endl;
-    //head =nullptr;
-    cout<<"The length of the list is:"<<lenList(head)<<endl;
-*/
     return 0;
 }
